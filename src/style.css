@@ -1,3 +1,45 @@
 h1{
-    color:red;
+    color:white;
+}
+body{
+    background-color: green;
+}
+.content{
+    width: 95vw;
+    height: 90vh;
+    background-color: white;
+    margin: 0 auto;
+}
+.header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.pokeIcon{
+    margin-right: 2em;
+}
+.search-wrapper{
+    margin: 1em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.search-input{
+    padding: 0.5em;
+    border: 0.5px solid lightgray;
+    border-radius: 5px;
+}
+.close,.search{
+    padding: 0.5em;
+    background-color: white;
+    border: 0px solid white;
+    border-radius: 5px;
+    margin: 0px 0.1em 0px 0.1em
+}
+
+.search:hover{
+    background-color:lightgreen;
+}
+.close:hover{
+    background-color: lightcoral;
 }
