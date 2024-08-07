@@ -19,7 +19,15 @@ let allPokemons = [];
         displayPokemons(allPokemons)
         console.log(allPokemons)
     })
+    async function fetchBeforeRedirect(id){
+        try{
+            const [pokemon] = await Promise.all([fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then((res)=>res.json())])
+            return true;
+        }catch(error){
+            console.error('Failed to fetch pokemon data before redirect');
+        }
 
+    }
     function displayPokemons(pokemons){
         let content = document.querySelector('.content')
         content.innerHTML = '';
@@ -40,6 +48,12 @@ let allPokemons = [];
                     </div>
             </div>
             `
+            listItem.addEventListener('click',async()=>{
+                const success = await fetchBeforeRedirect(pokemonID)
+                if(success){
+                    window.location.href = `./detail.html?id=${pokemonID}`
+                }
+            })
             content.appendChild(listItem)
         })
     

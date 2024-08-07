@@ -1,0 +1,1 @@
+(()=>{let e=document.createElement("h2");e.innerHTML="Hello NIggaer",document.body.appendChild(e)})();
