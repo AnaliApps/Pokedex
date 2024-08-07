@@ -3,11 +3,13 @@ import headerUI from './headerUI';
 import searchUI from './searchUI';
 import contentUI from './contentUI';
 import filters from './filters';
-
-document.body.appendChild(headerUI());
-document.body.appendChild(searchUI());
-document.body.appendChild(filters())
-document.body.appendChild(contentUI())
+let mainContainer = document.createElement('div');
+mainContainer.setAttribute('class','mainContainer');
+mainContainer.appendChild(headerUI())
+mainContainer.appendChild(searchUI())
+mainContainer.appendChild(filters())
+mainContainer.appendChild(contentUI())
+document.body.appendChild(mainContainer);
 const MAX_POKEMON = 251;
 let allPokemons = [];
     fetch(`https://pokeapi.co/api/v2/pokemon?limit=${MAX_POKEMON}`)
