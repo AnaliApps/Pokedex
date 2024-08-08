@@ -1,4 +1,5 @@
 import createDetailUI from "./createDetailUI";
+import './detailsStyle.css'
 document.body.appendChild(createDetailUI());
 let stats = []
 let sprites = []
@@ -21,13 +22,38 @@ function displaySprites(sp){
     }
     console.log(allImages.slice(0,4))
     let img = document.querySelector(".sprite-img");
+    let position = 0;
     img.src = allImages.slice(0,4)[0]
+    let leftBtn = document.querySelector('.left')
+    let rightBtn = document.querySelector('.right')
+    
+    leftBtn.addEventListener('click',()=>{
+        if(position === 0){
+            position = allImages.slice(0,4).length-1;
+        }else{
+            position--;
+        }
+
+        img.src = allImages.slice(0,4)[position]
+    });
+
+    rightBtn.addEventListener('click',()=>{
+        if(position === allImages.slice(0,4).length-1){
+            position = 0
+        }else{
+            position++;
+        }
+
+        img.src = allImages.slice(0,4)[position]
+    });
+
 }
+
 function displayStats(dts){
     let statContent = document.querySelector(".stats-content")
     dts.forEach(item=>{
         let para = document.createElement('p');
-        para.innerHTML = `${capitalize(item.stat.name)}:<span>${item['base_stat']}</span>`
+        para.innerHTML = `${capitalize(item.stat.name)}:<span class="progress-span"><progress value=${item['base_stat'].toString()} max="100">${item['base_stat']}%</progress></span>`
         statContent.appendChild(para)
     })
 }
