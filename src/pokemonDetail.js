@@ -50,11 +50,11 @@ function displaySprites(sp){
 }
 
 function displayStats(dts){
-    let statContent = document.querySelector(".stats-content")
+    let contentWrapper = document.querySelector(".content-wrapper")
     dts.forEach(item=>{
         let para = document.createElement('p');
         para.innerHTML = `${capitalize(item.stat.name)}:<span class="progress-span"><progress value=${item['base_stat'].toString()} max="100">${item['base_stat']}%</progress></span>`
-        statContent.appendChild(para)
+        contentWrapper.appendChild(para)
     })
 }
 function capitalize(string){

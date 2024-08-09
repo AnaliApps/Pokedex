@@ -3,6 +3,8 @@ export default function createDetailUI(){
     mainStats.setAttribute('class','main-stats')
     let statsContent = document.createElement('div');
     statsContent.setAttribute('class','stats-content');
+    let contentWrapper = document.createElement('div');
+    contentWrapper.setAttribute('class','content-wrapper');
     let imgDiv = document.createElement('div');
     imgDiv.setAttribute('class','img-div')
     let img = document.createElement('img');
@@ -31,6 +33,7 @@ export default function createDetailUI(){
     allBtnsImgs.appendChild(imgDiv)
     allBtnsImgs.appendChild(rightDiv)
     statsContent.appendChild(allBtnsImgs)
+    statsContent.appendChild(contentWrapper)
     mainStats.appendChild(header2Div)
     mainStats.appendChild(statsContent)
     return mainStats
