@@ -56,6 +56,12 @@ body{
 .list-wrap{
     width: 90px; 
     padding: 20px; 
+    margin: 5px;
+}
+#error > p{
+    font-size: 1.2em;
+    padding: 10px;
+    font-weight: bolder;
 }
 @media only screen and (min-width:768px){
     .mainContainer{
@@ -79,6 +85,9 @@ body{
     .search-input{
         width: 500px;
     }
+    #error > p{
+        font-size: 1.5em;
+    }
 }
 @media only screen and (min-width:1000px){
     .content{
@@ -99,5 +108,8 @@ body{
     }
     .search-input{
         width: 800px;
+    }
+    #error > p{
+        font-size: 1.8em;
     }
 }
