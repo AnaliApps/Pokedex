@@ -5,7 +5,7 @@
 }
 .main-stats{
     width: 100%;
-    font-size: 1.1em;
+    font-size: 0.9em;
     padding: 10px;
     margin-top: 40%;
     line-height: 30px;
@@ -43,7 +43,7 @@
 @media only screen and (min-width:768px){
     .main-stats{
         width: 80%;
-        font-size: 1.2em;
+        font-size: 1em;
         padding: 20px;
         margin-top: 35%;
         line-height: 40px;
@@ -73,7 +73,7 @@
 @media only screen and (min-width:1000px){
     .main-stats{
         width: 70%;
-        font-size: 1em;
+        font-size: 1.2em;
         padding: 30px;
         margin-top: 30%;
         line-height: 30px;

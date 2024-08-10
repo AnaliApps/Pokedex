@@ -1,4 +1,40 @@
-h1{
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: red;
+}
+.mainContainer{
+    margin: 10px;
+}
+.header,.search-wrapper,.filter-wrapper,.filter-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    font-size: 1.2em;
+}
+.header,.search-wrapper{
+    flex-direction: column;
+}
+.filter-wrapper > p{
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+.search-wrapper{
+    width: 100vw;
+}
+.seach-wrap{
+    width: 100%;
+}
+.search-input{
+    width: 80vw;
+    margin: 0 auto;
+}
+
+/* h1{
     color:white;
 }
 body{
@@ -66,8 +102,8 @@ body{
 #error{
     font-size: 1.2em;
     font-weight: bold;
-}
-.mainContainer{
+} */
+/* .mainContainer{
     container-type: inline-size;
 }
 @container (max-width: 500px){
@@ -88,4 +124,4 @@ body{
         width:30vw;
     }
     
-}
+} */

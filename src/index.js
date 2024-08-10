@@ -5,9 +5,15 @@ import contentUI from './contentUI';
 import filters from './filters';
 let mainContainer = document.createElement('div');
 mainContainer.setAttribute('class','mainContainer');
-mainContainer.appendChild(headerUI())
-mainContainer.appendChild(searchUI())
-mainContainer.appendChild(filters())
+let headerContent = document.createElement('div');
+headerContent.setAttribute('class','header-content')
+let searchFilter = document.createElement('div');
+searchFilter.setAttribute('class','search-filter');
+searchFilter.appendChild(searchUI())
+searchFilter.appendChild(filters())
+headerContent.appendChild(headerUI())
+headerContent.appendChild(searchFilter)
+mainContainer.appendChild(headerContent)
 mainContainer.appendChild(contentUI())
 document.body.appendChild(mainContainer);
 const MAX_POKEMON = 251;
