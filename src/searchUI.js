@@ -5,11 +5,11 @@ export default function searchUI(){
      searchWrapper.setAttribute('class','search-wrapper')
     let searchWrap = document.createElement('div');
     searchWrap.className = 'search-wrap';
-    let searchButton = document.createElement('button');
-    searchButton.setAttribute('class','search')
-    let searchImg = new Image()
-    searchImg.src = searchIcon;
-    searchImg.alt = 'search icon';
+    // let searchButton = document.createElement('button');
+    // searchButton.setAttribute('class','search')
+    // let searchImg = new Image()
+    // searchImg.src = searchIcon;
+    // searchImg.alt = 'search icon';
     let searchInput = document.createElement('input');
     searchInput.className = 'search-input';
     searchInput.setAttribute('placeholder','Search');
@@ -20,8 +20,8 @@ export default function searchUI(){
     closeIcon.alt = 'cross icon';
     closeIcon.className = 'search-close-icon'
     closeButton.appendChild(closeIcon)
-    searchButton.appendChild(searchImg)
-    searchWrap.appendChild(searchButton)
+    // searchButton.appendChild(searchImg)
+    // searchWrap.appendChild(searchButton)
     searchWrap.appendChild(searchInput)
     searchWrap.appendChild(closeButton);
     searchWrapper.appendChild(searchWrap)
